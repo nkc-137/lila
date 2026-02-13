@@ -160,14 +160,8 @@ function controls(ctrl: EditorCtrl, state: EditorState): VNode {
       ),
       h('div.castling', [
         h('strong', i18n.site.castling),
-        h('div', [
-          castleCheckBox(ctrl, 'K', i18n.site.whiteCastlingKingside),
-          castleCheckBox(ctrl, 'Q', 'O-O-O'),
-        ]),
-        h('div', [
-          castleCheckBox(ctrl, 'k', i18n.site.blackCastlingKingside),
-          castleCheckBox(ctrl, 'q', 'O-O-O'),
-        ]),
+        h('div', [castleCheckBox(ctrl, 'K', 'O-O'), i18n.site.white, castleCheckBox(ctrl, 'Q', 'O-O-O')]),
+        h('div', [castleCheckBox(ctrl, 'k', 'O-O'), i18n.site.black, castleCheckBox(ctrl, 'q', 'O-O-O')]),
       ]),
       h('div.enpassant', [
         h('label', { attrs: { for: 'enpassant-select' } }, i18n.site.enPassant),
